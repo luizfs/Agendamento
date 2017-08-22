@@ -22,15 +22,16 @@ class Agendamento{
        $id_turma = $this->Turma;
        $data_usarrecurso = $this->Data;
        $data=date("Y-m-d H:i:s", time());
-       $status =1;
-     
+       $status = 1;
+       $id_funcionario = 7;
                
    
-        $sql_teste  = 'INSERT INTO agendamento (id_recurso,id_turma,data_usarrecurso,id_aula,data,status) ';
-        $sql_teste .= 'VALUES (:id_recurso,:id_turma,:data_usarrecurso,:id_aula,:data,:status)';
+        $sql_teste  = 'INSERT INTO agendamento (id_funcionario,id_recurso,id_turma,data_usarrecurso,id_aula,data,status) ';
+        $sql_teste .= 'VALUES (:id_funcionario,:id_recurso,:id_turma,:data_usarrecurso,:id_aula,:data,:status)';
 
             try{
                $query_teste = DB::getConexao()->prepare($sql_teste);
+               $query_teste->bindValue(':id_funcionario',$id_funcionario,PDO::PARAM_STR);
                $query_teste->bindValue(':id_recurso',$id_recurso,PDO::PARAM_STR);
                $query_teste->bindValue(':id_turma',$id_turma,PDO::PARAM_STR);
                $query_teste->bindValue(':data_usarrecurso',$data_usarrecurso,PDO::PARAM_STR);
@@ -78,7 +79,9 @@ class Agendamento{
 	}
     }
     
-   
+    
+    
+    
       
 }//Fim da classe
 

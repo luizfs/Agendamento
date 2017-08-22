@@ -62,7 +62,7 @@
 
                             </select>  
                             <label for="nome">Data:</label>
-                            <input type="text" name="data" size="30" required="required" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$">  
+                            <input type="text" name="data" size="30" required="required" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" title="O data deve estar no formato dd/mm/YYYY">  
                          </td>
                      </tr>
                      <tr>
@@ -92,9 +92,6 @@
                           ?>    
                          </td>
                         </tr> 
-                                            
-                            
-                        
                 </table>
             </fieldset>
             <input type="submit">

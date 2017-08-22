@@ -40,8 +40,7 @@ class Funcionario {
        $senha = $this->Senha;
        $data=date("Y-m-d H:i:s", time());
        $status =0;
-       $permissao = 1;
-               
+       $permissao = 1;     
    
         $sql_teste  = 'INSERT INTO funcionario (nome,email,matricula,cargo,usuario,senha,data,status,permissao) ';
         $sql_teste .= 'VALUES (:nome,:email,:matricula,:cargo,:usuario,:senha,:data,:status,:permissao)';
